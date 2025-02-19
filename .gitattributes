@@ -1,0 +1,2 @@
+Rakefile linguist-vendored
+uv.lock linguist-generated -diff

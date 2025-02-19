@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# Environment variables
+.env
+
+# Visual Studio Code
+.vscode/
+
+# Editor backup files
+*~
+
+# Mise overrides
+mise.local.toml
+
+# Python artifacts
+.mypy_cache/
+.pytest_cache/
+.tox/
+__pycache__/
+build/
+dist/
+*.egg-info/
+*.py[cdo]

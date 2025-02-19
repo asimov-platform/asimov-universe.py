@@ -1,0 +1,29 @@
+# See: https://github.com/actions/setup-python
+---
+name: Python
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: macos-15
+    strategy:
+      matrix:
+        python-version: [3.13]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Run tests
+        run: python3 --version
